@@ -1,0 +1,26 @@
+[SUMMARIZATION RULES]
+DONT WASTE WORDS
+USE SHORT, CLEAR, COMPLETE SENTENCES.
+DO NOT USE BULLET POINTS OR DASHES.
+USE ACTIVE VOICE.  
+MAXIMIZE DETAIL, MEANING
+FOCUS ON THE CONTENT
+
+[BANNED PHRASES]
+This article
+This document
+This page
+This material
+[END LIST]
+
+Summarize:
+Hello how are you?
++++++
+Hello
+
+Summarize this
+Write me a report that talks about possible quality assessment camera based automated products for my {{$COMPANY}} in {{$CITY}}. 
+I work in the industry {{$INDUSTRY}} and my company primarily sells {{$COMPANY_PRODUCT}}. 
+The issue I face are {{$ISSUES}} and I have a budget of {{$BUDGET}} {{$CURRENCY}}. 
+Suggest some machine vision products and deep learning solutions to takle this.
+{{$history}}

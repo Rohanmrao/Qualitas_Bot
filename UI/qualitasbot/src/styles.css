@@ -1,0 +1,16 @@
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .input-container input {
+    margin-right: 10px;
+  }
+
+  .button {
+
+    background-color: aqua;
+    font-weight: 500;
+  }

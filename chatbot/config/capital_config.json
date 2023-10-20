@@ -1,0 +1,21 @@
+{
+    "schema": 1,
+    "type": "completion",
+    "schema_description": "Provides information about a capital city, which is given as an input, using the GPT2 model",
+    "default_services": ["hf_gpt2_text_completion"],
+    "completion": {
+        "temperature": 0.01,
+        "top_p": 1,
+        "max_tokens": 256,
+        "number_of_responses": 1
+    },
+    "input": {
+        "parameters": [
+            {
+                "name": "input",
+                "description": "The name of the capital city",
+                "defaultValue": "India"
+            }
+        ]
+    }
+}
