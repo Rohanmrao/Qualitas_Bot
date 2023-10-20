@@ -115,6 +115,7 @@ def display_word_by_word(text, delay=0.1):
 
 @app.route('/', methods=['GET'])
 def push_response():
+    
     user_input = str(request.args.get('user_input'))
     print(user_input)
     ai_response = chatbot(user_input)
