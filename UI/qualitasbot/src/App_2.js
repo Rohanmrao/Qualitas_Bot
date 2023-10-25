@@ -7,12 +7,11 @@ function App_2() {
   ]);
 
   const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false); // Step 2
+  const [loading, setLoading] = useState(false); 
 
   const printChatBubble = () => {
     if (input.trim() !== "") {
-      // Start loading animation
-      setLoading(true); // Step 3
+      setLoading(true);
 
       // Making a GET request to the Flask endpoint with the user's input as a query parameter
       fetch(`http://192.168.1.178:5000/?user_input=${encodeURIComponent(input)}`)
@@ -25,8 +24,8 @@ function App_2() {
           console.error('Error fetching data:', error);
         })
         .finally(() => {
-          // Stop loading animation when the request is complete
-          setLoading(false); // Step 3
+       
+          setLoading(false); 
         });
       setInput("");
     }
@@ -58,9 +57,9 @@ function App_2() {
           }}
           placeholder="Type a message..."
         />
-        <button onClick={printChatBubble} className="button">Send Message</button>
+        {/* <button onClick={printChatBubble} className="button">Send Message</button> */}
       </div>
-      {loading && <div className="loading-animation">Loading...</div>} {/* Step 4 */}
+      {loading && <div className="loading-animation">Loading...</div>} 
     </div>
   );
 }
