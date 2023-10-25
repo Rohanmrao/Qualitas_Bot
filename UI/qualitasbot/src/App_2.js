@@ -11,7 +11,7 @@ function App_2() {
   const printChatBubble = () => {
     if (input.trim() !== "") {
       // Making a GET request to the Flask endpoint with the user's input as a query parameter
-      fetch(`http://127.0.0.1:5000/?user_input=${encodeURIComponent(input)}`)
+      fetch(`http://192.168.1.178:5000/?user_input=${encodeURIComponent(input)}`)
         .then(response => response.text())
         .then(data => {
           setMessages([...messages, { text: input, sender: "user" } , { text: data, sender: "bot" }]);
@@ -50,7 +50,7 @@ function App_2() {
         }}
         placeholder="Type a message..."
       />
-      <button onClick={printChatBubble} className="button">Send Message</button>
+      {/* <button onClick={printChatBubble} className="button">Send Message</button> */}
     </div>
     </div>
   );
