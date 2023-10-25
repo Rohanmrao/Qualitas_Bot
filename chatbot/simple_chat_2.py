@@ -13,11 +13,11 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS # for cross origin requests since the frontend is on a react app with port 3000
 
 app = Flask(__name__)
-CORS(app, origins="http://192.168.1.178:3000/")
+CORS(app, origins="http://localhost:3000")
 
 # Static variables and directories
 import json
-CONFIG_DIRECTORY = "chatbot/config/chat_config.json"
+CONFIG_DIRECTORY = "../chatbot/config/chat_config.json"
 
 chat_config_dict = json.load(open(CONFIG_DIRECTORY))
 # print(chat_config_dict, type(chat_config_dict))
