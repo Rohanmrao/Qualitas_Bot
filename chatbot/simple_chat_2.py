@@ -17,7 +17,7 @@ CORS(app, origins="http://192.168.1.178:3000/")
 
 # Static variables and directories
 import json
-CONFIG_DIRECTORY = "/home/rohan/qualitas_gitlab/chatbot/config/chat_config.json"
+CONFIG_DIRECTORY = "chatbot/config/chat_config.json"
 
 chat_config_dict = json.load(open(CONFIG_DIRECTORY))
 # print(chat_config_dict, type(chat_config_dict))
