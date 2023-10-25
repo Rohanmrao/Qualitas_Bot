@@ -13,7 +13,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS # for cross origin requests since the frontend is on a react app with port 3000
 
 app = Flask(__name__)
-CORS(app, origins="http://localhost:3000")
+CORS(app, origins="http://192.168.1.179:3000")
 
 # Static variables and directories
 import json
