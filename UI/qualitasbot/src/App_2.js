@@ -26,7 +26,7 @@ function App_2() {
 
   return (
     <div className="App">
-      <div className="container mt-5">
+      <div className="container mt-3">
         {messages.map((message, index) => (
           <div key={index} className={`row ${message.sender === "user" ? "justify-content-end" : ""}`}>
             <div className="col-6 text-right"> 
