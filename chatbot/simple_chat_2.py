@@ -78,18 +78,6 @@ chatbot = kernel.register_semantic_function(
     )
 )
 
-# context = kernel.create_new_context()
-# context["history"] = ""
-# context["COMPANY"] = "ABC cookies"
-# context["COMPANY_PRODUCT"] = "Biscuit packets"
-# context["CITY"] = "Bengaluru"
-# context["ISSUES"] = "Some packets have lesser number of biscuits than mentioned on the packet"
-# context["BUDGET"] = 1000000
-# context["CURRENCY"] = "INR"
-
-# print(chatbot("I am jim, I sell cookies, what are some machine vision products I can deploy in my factories to check for faults and mistakes ? I'm in Bangalore and I can spend upto 10 lakh rupees. I have fast moving goods. Main issue : Some packets have lesser number of biscuits than mentioned on the packet. Suggest the way to go here.", context=context))
-# print(chatbot("",context=context))
-
 # This is a function that displays the repsonse word by word with a time delay set (to mimic the typing of a human). Sentences are broken according to serial numbers
 def display_word_by_word(text, delay=0.1):
     sections = re.split(r"\d+\.", str(text))
@@ -100,26 +88,13 @@ def display_word_by_word(text, delay=0.1):
             time.sleep(delay)
         print("\n")
 
-
-# while True:
-#     user_input = input("\nUser -> ")
-
-#     if user_input != "devmode": # devmode is a keyword to enter developer mode and exit the program
-#         ai_response = chatbot(user_input)
-#         print("QualitasBot -> ", end='')
-#         display_word_by_word(ai_response, delay=0.1)
-#         print("\n*******************\n")
-#     else:
-#         exit()
-
-
 @app.route('/', methods=['GET'])
 def push_response():
     
     user_input = str(request.args.get('user_input'))
     print(user_input)
     ai_response = chatbot(user_input)
-    print(ai_response)
+    # print(ai_response)
     return str(ai_response)
     
 

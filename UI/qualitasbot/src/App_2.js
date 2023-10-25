@@ -38,14 +38,20 @@ function App_2() {
         ))}
       </div>
       <div className="input-container">
-        <input 
-          type="text" 
-          value={input} 
-          onChange={e => setInput(e.target.value)} 
-          placeholder="Type a message..."
-        />
-        <button onClick={printChatBubble} className="button">Send Message</button>
-      </div>
+      <input 
+        type="text" 
+        value={input} 
+        onChange={e => setInput(e.target.value)} 
+        onKeyDown={e => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            printChatBubble();
+          }
+        }}
+        placeholder="Type a message..."
+      />
+      <button onClick={printChatBubble} className="button">Send Message</button>
+    </div>
     </div>
   );
 }
