@@ -12,6 +12,10 @@ import re   # for splitting the response into sections
 from flask import Flask, request, jsonify
 from flask_cors import CORS # for cross origin requests since the frontend is on a react app with port 3000
 
+from datetime import datetime
+import socket
+import os
+
 app = Flask(__name__)
 CORS(app)
 
@@ -90,11 +94,27 @@ def display_word_by_word(text, delay=0.1):
 
 @app.route('/', methods=['GET'])
 def push_response():
+
+    ip = request.remote_addr
+    hostname = socket.gethostbyaddr(ip)[0]
+    port = request.environ.get('REMOTE_PORT')
+    agent = request.headers.get('User-Agent')
+    dateTime = datetime.now().strftime('%Y/%m/%d %H:%M:%S')
     
     user_input = str(request.args.get('user_input'))
-    print(user_input)
+    # print(user_input)
     ai_response = chatbot(user_input)
     # print(ai_response)
+
+    with open('log.txt', 'a') as f:
+        f.write('IP Address: ' + ip + '\n')
+        f.write('Hostname: ' + hostname + '\n')
+        f.write('Port Number: ' + str(port) + '\n')
+        f.write('User Agent: ' + agent + '\n')
+        f.write('Date: ' + dateTime + '\n')
+        f.write('User Input: ' + user_input + '\n')
+        f.write('AI Response: ' + str(ai_response) + '\n\n')
+
     return str(ai_response)
     
 
