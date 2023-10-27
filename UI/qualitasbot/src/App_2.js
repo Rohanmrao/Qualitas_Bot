@@ -14,6 +14,21 @@ function App_2() {
       setLoading(true);
 
       // Making a GET request to the Flask endpoint with the user's input as a query parameter
+      {/* The overall strcuture for the fetch request is defined by three primary variables or status flags, which is directly operated by Javascript's UseState hook
+        
+          i) messages -> Describes the text and it's subsequent details - 
+            a) text : can either be 'input' from the user or 'data' from the bot
+            b) sender : can either be 'bot' or 'user'
+
+          ii) loading -> Boolean flag to mark whether the code is in loading stage or not 
+            a) SetLoading : True/False, triggers when the loading screen pops up 
+          
+          iii) input -> Uses the 'input' tag in HTML to take in user input.
+            a) setInput : Initially set to empty string at the time of fetch, to reset the user's input and make room for a new question
+          
+        */}
+
+
       fetch(`http://192.168.1.178:5000/?user_input=${encodeURIComponent(input)}`)
         .then(response => response.text())
         .then(data => {
@@ -30,6 +45,30 @@ function App_2() {
       setInput("");
     }
   };
+
+  {/* Note to self - MDN docs on handling a basic aynschronous promise- 
+
+            function async_function() {
+          return new Promise((resolve, reject) => {
+            if (<some condition>)) {
+              resolve('Success');
+            } else {
+              reject(new Error('Failed'));
+            }
+          });
+        }
+
+        checkvalue()
+          .then((variable) => {
+            console.log(variable); // print the resolved variable's value
+          })
+          .catch((err) => {
+            console.error(err); // print the rejected variable's value, an error in this case
+          })
+          .finally(() => {
+            console.log('Experiment completed');  // print this once the promise has yielded something, either a resolve or a reject
+          });
+*/}
 
   return (
     <div className="App">
