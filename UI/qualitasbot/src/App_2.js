@@ -44,21 +44,22 @@ function App_2() {
           </div>
         ))}
       </div>
-      <div className="input-container">
-        <input
-          type="text"
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          onKeyDown={e => {
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              printChatBubble();
-            }
-          }}
-          placeholder="Type a message..."
-        />
-        {/* <button onClick={printChatBubble} className="button">Send Message</button> */}
-      </div>
+        <div className="input-container footer">
+          <input
+            type="text"
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            onKeyDown={e => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                printChatBubble();
+              }
+            }}
+            placeholder="Type a message..."
+          />
+          
+          {/* <button onClick={printChatBubble} className="button">Send Message</button> */}
+        </div>
       {loading && <div className="loading-animation spinner center-screen"></div>} 
     </div>
   );
