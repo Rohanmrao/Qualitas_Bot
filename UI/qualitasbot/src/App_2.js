@@ -25,7 +25,7 @@ function App_2() {
         })
         .finally(() => {
        
-          setLoading(false); 
+          setLoading(false); // loading status is set to false after the message fetch
         });
       setInput("");
     }
@@ -59,7 +59,7 @@ function App_2() {
         />
         {/* <button onClick={printChatBubble} className="button">Send Message</button> */}
       </div>
-      {loading && <div className="loading-animation">Loading...</div>} 
+      {loading && <div className="loading-animation spinner center-screen"></div>} 
     </div>
   );
 }
