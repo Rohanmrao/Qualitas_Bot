@@ -22,3 +22,11 @@ Date: 2023/10/27 16:57:11
 User Input: Hi
 AI Response: Hello! How can I assist you today?
 
+IP Address: 192.168.1.178
+Hostname: rohan-VivoBook-ASUSLaptop-X515JAB-X515JA
+Port Number: 57262
+User Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+Date: 2023/10/27 17:10:08
+User Input: Hi
+AI Response: Hello! How can I assist you today?
+
