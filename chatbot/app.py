@@ -4,6 +4,7 @@ from semantic_kernel import (
     ChatPromptTemplate,
     SemanticFunctionConfig,
     PromptTemplateConfig,
+    PromptTemplate
 )
 
 import time
@@ -33,6 +34,8 @@ api_key, org_id = sk.openai_settings_from_dot_env()
 kernel.add_chat_service(
     "chat-gpt", OpenAIChatCompletion("gpt-3.5-turbo", api_key, org_id))
 
+myPlugin = kernel.import_semantic_skill_from_directory("CustomPlugins","SalesMan")
+chatbot = myPlugin["Sell"]
 
 def print_ai_services(kernel):
     print(

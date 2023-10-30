@@ -30,3 +30,19 @@ Date: 2023/10/27 17:10:08
 User Input: Hi
 AI Response: Hello! How can I assist you today?
 
+IP Address: 192.168.1.178
+Hostname: rohan-VivoBook-ASUSLaptop-X515JAB-X515JA
+Port Number: 50772
+User Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+Date: 2023/10/30 14:07:40
+User Input: Hi
+AI Response: Hello! How can I assist you today?
+
+IP Address: 192.168.1.178
+Hostname: rohan-VivoBook-ASUSLaptop-X515JAB-X515JA
+Port Number: 56162
+User Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+Date: 2023/10/30 14:07:50
+User Input: who are you ?
+AI Response: I am a sales representative from Qualitas Technologies Pvt Ltd. We specialize in providing machine vision products for quality assessment and fault detection in factory environments. How can I help you with our products and services?
+
